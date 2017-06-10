@@ -1,4 +1,4 @@
-# kubernet-stuff
+# kubernetes-stuff
 Useful kubernetes resources
 
 
