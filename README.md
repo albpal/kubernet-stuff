@@ -3,7 +3,7 @@ Useful kubernetes resources
 
 
 ## Scripts
-open_port.sh
+* open_port.sh / close_port.sh
 
 It applies different iptables rules to be able to access to containers from outside (through public IP). It works well if you have installed kubernetes on a single node.
 
