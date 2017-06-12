@@ -24,6 +24,11 @@ spec:
       labels:
         app: master
     spec:
+      volumes:
+      - name: pv-storage
+        persistentVolumeClaim:
+          claimName: jenkins-volume-claim
+
       containers:
       - name: master
         image: jenkins:2.7.2
@@ -46,15 +51,5 @@ spec:
               key: options
         volumeMounts:
         - mountPath: /var/jenkins_home
-          name: jenkins-home
-        resources:
-          limits:
-            cpu: 500m
-            memory: 1500Mi
-          requests:
-            cpu: 500m
-            memory: 1500Mi
-      volumes:
-      - name: jenkins-home
-        emptyDir: {}
+          name: pv-storage
 # [END jenkins_deployment]
