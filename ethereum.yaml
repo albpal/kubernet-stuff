@@ -47,5 +47,5 @@ spec:
           failureThreshold: 5
         volumeMounts:
         - mountPath: /root
-          name: pv-claim
+          name: pv-storage
 # [END ethereum_deployment]
