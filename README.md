@@ -7,7 +7,7 @@ Useful kubernetes resources
 
 It applies different iptables rules to be able to access to containers from outside (through public IP). It works well if you have installed kubernetes on a single node.
 
-For example, if you want to open to internet port 80, your container's service is running on 8080, your private container IP is 192.168.134.67, the private IP of your container host is 192.168.134.64, your public interface is eth0 and the private interface is tunl0, you can execute the following to access port 80 using the public IP and accessing port 8080 on your private container:
+For example, if you want to open to internet port 80, your container's service is running on 8080, your private container IP is 192.168.134.67, the private IP of your container host is 192.168.134.64, your public interface is eth0 and the private interface is tunl0, you can execute the following to access port 80 using the public IP and access port 8080 on your private container:
 
 > open_port.sh 80 8080 192.168.134.67 192.168.134.64 eth0 tunl0
 
