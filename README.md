@@ -17,11 +17,11 @@ After that, if you want to revert all the changes you can execute:
 
 You can chek what rules have been applied by:
 
-iptables -S | grep $PUBLIC_PORT
+> iptables -S | grep $PUBLIC_PORT
 
 or 
 
-iptables -t nat -S | grep $PUBLIC_PORT
+> iptables -t nat -S | grep $PUBLIC_PORT
 
 ## secret.yaml
 It creates a secret. The secret value has to be encoded on base64. For example:
