@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # [START nodejs_deployment]
-apiVersion: extensions/v1beta1
 kind: Deployment
+apiVersion: extensions/v1beta1
 metadata:
   name: nodejs
   namespace: default
@@ -22,10 +22,12 @@ spec:
   template:
     metadata:
       labels:
-        app: master
+        name: nodejs
+    spec:
       containers:
       - name: master
         image: apalau/nodejs
         ports:
         - containerPort: 8090
+
 # [END nodejs_deployment]
