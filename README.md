@@ -15,6 +15,14 @@ After that, if you want to revert all the changes you can execute:
 
 > close_port.sh 80 8080 192.168.134.67 192.168.134.64 eth0 tunl0
 
+You can chek what rules have been applied by:
+
+iptables -S | grep $PUBLIC_PORT
+
+or 
+
+iptables -t nat -S | grep $PUBLIC_PORT
+
 ## secret.yaml
 It creates a secret. The secret value has to be encoded on base64. For example:
 
